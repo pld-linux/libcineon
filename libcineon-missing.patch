@@ -1,0 +1,17 @@
+Cineon format seem to have single-component elements only;
+this patch restores function removed on migration from OpenDPX,
+which is still used in Writer.
+--- libcineon/libcineon/CineonHeader.cpp.orig	2011-11-26 07:22:43.241299274 +0100
++++ libcineon/libcineon/CineonHeader.cpp	2011-11-26 07:22:28.194632104 +0100
+@@ -364,6 +364,11 @@
+ 	IndustryHeader::Reset();
+ }
+ 
++int cineon::GenericHeader::ImageElementComponentCount(const int element) const
++{
++	return 1;
++}
++
+ int cineon::GenericHeader::ImageElementCount() const
+ {
+ 	int i = 0;

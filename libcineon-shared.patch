@@ -1,0 +1,30 @@
+--- cineon/libcineon/Makefile.am.orig	2011-11-20 09:55:33.000000000 +0100
++++ cineon/libcineon/Makefile.am	2011-11-20 10:30:43.337652371 +0100
+@@ -1,7 +1,7 @@
+ 
+-lib_LIBRARIES = libcineon.a
++lib_LTLIBRARIES = libcineon.la
+ 
+-libcineon_a_SOURCES = Codec.cpp \
++libcineon_la_SOURCES = Codec.cpp \
+                    Cineon.cpp \
+                    CineonHeader.cpp \
+                    ElementReadStream.cpp \
+--- cineon/tools/cineonheader/Makefile.am.orig	2011-11-20 09:55:33.000000000 +0100
++++ cineon/tools/cineonheader/Makefile.am	2011-11-20 10:36:28.250997251 +0100
+@@ -1,5 +1,5 @@
+ 
+-LIBCINEON = $(top_builddir)/libcineon/libcineon.a
++LIBCINEON = $(top_builddir)/libcineon/libcineon.la
+ 
+ INCLUDES = -I$(top_builddir)/libcineon
+ 
+--- cineon/tools/cineon2tiff/Makefile.am.orig	2011-11-20 09:55:33.000000000 +0100
++++ cineon/tools/cineon2tiff/Makefile.am	2011-11-20 10:36:37.380997558 +0100
+@@ -1,5 +1,5 @@
+ 
+-LIBCINEON = $(top_builddir)/libcineon/libcineon.a
++LIBCINEON = $(top_builddir)/libcineon/libcineon.la
+ 
+ INCLUDES = -I$(top_builddir)/libcineon
+ 
