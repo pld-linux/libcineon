@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Biblioteka do odczytu/zapisu obrazów w formacie Cineon
 Name:		libcineon
 Version:	0.1
 %define	subver	svn13
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries
 # svn checkout http://libcineon.googlecode.com/svn/trunk/ libcineon
