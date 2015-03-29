@@ -1,13 +1,13 @@
 #
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
-#
+
+%define	subver	svn13
 Summary:	Cineon Image Format reader/writer library
 Summary(pl.UTF-8):	Biblioteka do odczytu/zapisu obrazów w formacie Cineon
 Name:		libcineon
 Version:	0.1
-%define	subver	svn13
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 # svn checkout http://libcineon.googlecode.com/svn/trunk/ libcineon
@@ -62,6 +62,9 @@ Statyczna biblioteka Cineon.
 Summary:	Cineon API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Cineon
 Group:		Documentation
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API and internal documentation for Cineon library.
