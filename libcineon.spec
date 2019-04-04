@@ -15,7 +15,7 @@ Source0:	%{name}-%{subver}.tar.xz
 # Source0-md5:	b2956588f890e86a89a8ce26facac956
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-missing.patch
-URL:		http://code.google.com/p/libcineon/
+URL:		https://github.com/inequation/libcineon
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
 %{?with_apidocs:BuildRequires:	doxygen}
