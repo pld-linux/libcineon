@@ -62,9 +62,7 @@ Statyczna biblioteka Cineon.
 Summary:	Cineon API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki Cineon
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API and internal documentation for Cineon library.
