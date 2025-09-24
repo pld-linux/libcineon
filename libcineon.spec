@@ -7,7 +7,7 @@ Summary:	Cineon Image Format reader/writer library
 Summary(pl.UTF-8):	Biblioteka do odczytu/zapisu obrazów w formacie Cineon
 Name:		libcineon
 Version:	0.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
 # svn checkout http://libcineon.googlecode.com/svn/trunk/ libcineon
