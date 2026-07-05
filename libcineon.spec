@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	apidocs		# do not build and package API docs
+%bcond_without	apidocs		# API documentation (doxygen generated)
 
 %define	subver	svn13
 Summary:	Cineon Image Format reader/writer library
@@ -20,7 +20,9 @@ BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake
 %{?with_apidocs:BuildRequires:	doxygen}
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtiff-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -106,12 +108,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING README
 %attr(755,root,root) %{_bindir}/cineon2tiff
 %attr(755,root,root) %{_bindir}/cineonheader
-%attr(755,root,root) %{_libdir}/libcineon.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libcineon.so.0
+%{_libdir}/libcineon.so.*.*.*
+%ghost %{_libdir}/libcineon.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libcineon.so
+%{_libdir}/libcineon.so
 %{_libdir}/libcineon.la
 %{_includedir}/Cineon*.h
 
